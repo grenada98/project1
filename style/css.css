@@ -636,6 +636,7 @@ body{
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-bottom: 35px;
+	max-width: 350px;
 }
 .radiobutton{
 	display: flex;
