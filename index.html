@@ -15,6 +15,27 @@
 			<ul class="header-ul">
 				<li class="menu-li">
 					<a class="header-a" href="#">Манипуляторы</a>
+					<div class="header-a-hidden-menu">
+						<div class="header-a-hidden-menu-in">
+							<ul class="header-a-hidden-menu-ul">
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">3 тонны</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">5 тонн</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">7 тонн</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">10 тонн</a></li>
+							</ul>
+							<ul class="header-a-hidden-menu-ul">
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">15 тонны</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">25 тонн</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">Длинномер</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">Вездеход</a></li>
+							</ul>
+							<ul class="header-a-hidden-menu-ul">
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">С люлькой</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">Кран</a></li>
+								<li class="header-a-hidden-menu-ul-li"><a class="header-li-a" href="#">Камаз</a></li>
+							</ul>
+						</div>
+					</div>
 				</li>
 				<li class="menu-li">
 					<a class="header-a" href="#">Виды перевозок</a>
@@ -64,16 +85,34 @@
 <div class="main">
 	<div class="main-1">
 		<span class="text-1">в Москве и МО</span>
-		<span class="text-2">Аренда</br> манипуляторов</span>
+		<span class="text-2">Аренда<br> манипуляторов</span>
 		<span class="text-3">недорого</span>
-		<a class="main-button" href="#">Заказать манипулятор</a>
+		<a class="main-button" id="btn-popup" href="#">Заказать манипулятор</a>
+		<div class="popup" id="popup-id">
+			<div class="popup-in active">
+				<span class="popup-in-span-1">Для аренды манипулятора </br>
+					заполните поля ниже</span>
+					<input class="popup-input-name" type="text" placeholder="Введите своё имя">
+					<input class="popup-input-tel" type="tel" placeholder="+7___-___-__-__">
+					<a class="screen6-in-div-a-5" href="#" id="btn-popup-2">Получить точный расчет</a>
+					<div class="popup-div-privacy">
+						<img src="img/Vector.svg">
+						<span class="popup-privacy">Мы не передаём ваши данные 3-м лицам</span>
+					</div>
+			</div>
+			<div class="popup-in-2">
+				<a class="popup-in-2-a-img" href="#"><img class="popup-in-2-img" src="img/pop-close.svg"></a>
+				<span class="popup-in-2-span-1">Спасибо за Вашу заявку!</span>
+				<span class="popup-in-2-span-2">Наши менеджеры скоро свяжутся с Вами</span>
+			</div>
+		</div>
 	</div>
 	<div class="main-2">
 		<ul class="main-2-ul">
-			<li class="main-2-li">Работаем 24/7</br>без выходных</li>
-			<li class="main-2-li">Современная спецтехника</br> для решения любых задач</li>
-			<li class="main-2-li">Лучшие условия</br> заказа услуг техники</li>
-			<li class="main-2-li">Низкие цены</br> на аренду без наценок</li>
+			<li class="main-2-li">Работаем 24/7<br>без выходных</li>
+			<li class="main-2-li">Современная спецтехника<br> для решения любых задач</li>
+			<li class="main-2-li">Лучшие условия<br> заказа услуг техники</li>
+			<li class="main-2-li">Низкие цены<br> на аренду без наценок</li>
 		</ul>
 	</div>
 </div>
@@ -326,10 +365,10 @@
 	<div class="screen6-in">
 		<span class="screen6-span1">Получите за 1 минуту</span>
 		<span class="screen6-span2">Расчёт предварительной</br> стоимости услуг перевозки</span>
-		<div class="screen6-in-div-var-1">
+		<div class="screen6-in-div active">
 			<div class="screen6-plan">
-				<div class="screen6-plan-div">
-					<div class="screen6-circle">
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
 						<div class="screen6-circle-in"></div>
 					</div>
 				</div>
@@ -364,41 +403,47 @@
 					<img class="screen6-in-div-ul-li-img" src="img/manip6.svg">
 					<div class="radiobutton">
 						<input class="radiobutton-input" type="radio">
+						<span class="radiobutton-input-fake" id="radiobtn-1"></span>
 						<label class="radiobutton-label" for="radio">Манипулятор 3 т</label>
 					</div>
 				</li>
 				<li class="screen6-in-div-ul-li">
-					<img src="img/manip7.svg">
+					<img class="screen6-in-div-ul-li-img" src="img/manip7.svg">
 					<div class="radiobutton">
 						<input class="radiobutton-input" type="radio">
+						<span class="radiobutton-input-fake" id="radiobtn-2"></span>
 						<label class="radiobutton-label" for="radio">Манипулятор 5 т</label>
 					</div>
 				</li>
 				<li class="screen6-in-div-ul-li">
-					<img src="img/manip8.svg">
+					<img class="screen6-in-div-ul-li-img" src="img/manip8.svg">
 					<div class="radiobutton">
 						<input class="radiobutton-input" type="radio">
+						<span class="radiobutton-input-fake" id="radiobtn-3"></span>
 						<label class="radiobutton-label" for="radio">Манипулятор 7 т</label>
 					</div>
 				</li>
 				<li class="screen6-in-div-ul-li">
-					<img src="img/manip9.svg">
+					<img class="screen6-in-div-ul-li-img" src="img/manip9.svg">
 					<div class="radiobutton">
 						<input class="radiobutton-input" type="radio">
+						<span class="radiobutton-input-fake" id="radiobtn-4"></span>
 						<label class="radiobutton-label" for="radio">Манипулятор 10 т</label>
 					</div>
 				</li>
 				<li class="screen6-in-div-ul-li">
-					<img src="img/manip10.svg">
+					<img class="screen6-in-div-ul-li-img" src="img/manip10.svg">
 					<div class="radiobutton">
 						<input class="radiobutton-input" type="radio">
+						<span class="radiobutton-input-fake" id="radiobtn-5"></span>
 						<label class="radiobutton-label" for="radio">Манипулятор 15 т</label>
 					</div>
 				</li>
 				<li class="screen6-in-div-ul-li">
-					<img src="img/manip11.svg">
+					<img class="screen6-in-div-ul-li-img" src="img/manip11.svg">
 					<div class="radiobutton">
 						<input class="radiobutton-input" type="radio">
+						<span class="radiobutton-input-fake" id="radiobtn-6"></span>
 						<label class="radiobutton-label" for="radio">Манипулятор 25 т</label>
 					</div>
 				</li>
@@ -407,7 +452,266 @@
 				<a class="screen6-in-div-a" href="#">На следующий шаг</a>
 			</div>
 		</div>
+		<div class="screen6-in-div-2">
+			<div class="screen6-plan">
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div">
+					<div class="screen6-circle">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div">
+					<div class="screen6-circle">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div">
+					<div class="screen6-circle">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="screen6-plan-count">
+				<span class="screen6-plan-count-span-1">2</span>
+				<span class="screen6-plan-count-span-2">/5</span>
+			</div>
+			<span class="screen6-in-div-span">Выберите тип манипулятора</span>
+			<ul class="screen6-in-div-ul">
+				<li class="screen6-in-div-ul-li">
+					<img class="screen6-in-div-ul-li-img" src="img/manip1.svg">
+					<div class="radiobutton">
+						<input class="radiobutton-input" type="radio">
+						<label class="radiobutton-label" for="radio">Манипулятор длинномер</label>
+					</div>
+				</li>
+				<li class="screen6-in-div-ul-li">
+					<img class="screen6-in-div-ul-li-img" src="img/manip2.svg">
+					<div class="radiobutton">
+						<input class="radiobutton-input" type="radio">
+						<label class="radiobutton-label" for="radio">Манипулятор вездеход</label>
+					</div>
+				</li>
+				<li class="screen6-in-div-ul-li">
+					<img class="screen6-in-div-ul-li-img" src="img/manip4.svg">
+					<div class="radiobutton">
+						<input class="radiobutton-input" type="radio">
+						<label class="radiobutton-label" for="radio">Кран манипулятор</label>
+					</div>
+				</li>
+				<li class="screen6-in-div-ul-li">
+					<img class="screen6-in-div-ul-li-img" src="img/manip5.svg">
+					<div class="radiobutton">
+						<input class="radiobutton-input" type="radio">
+						<label class="radiobutton-label" for="radio">Манипулятор Камаз</label>
+					</div>
+				</li>
+				<li class="screen6-in-div-ul-li">
+					<img class="screen6-in-div-ul-li-img" src="img/manip1.svg">
+					<div class="radiobutton">
+						<input class="radiobutton-input" type="radio">
+						<label class="radiobutton-label" for="radio">Манипулятор с люлькой</label>
+					</div>
+				</li>
+			</ul>
+			<div class="screen6-div-a-1">
+				<a class="screen6-in-div-a-back-2" href="#">На прерыдущий шаг</a>
+				<a class="screen6-in-div-a-2" href="#">На следующий шаг</a>
+			</div>
+		</div>
+		<div class="screen6-in-div-3 active">
+			<div class="screen6-plan">
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div">
+					<div class="screen6-circle">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div">
+					<div class="screen6-circle">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="screen6-plan-count">
+				<span class="screen6-plan-count-span-1">3</span>
+				<span class="screen6-plan-count-span-2">/5</span>
+			</div>
+			<span class="screen6-in-div-span-distance">Расстояние от МКАД для загрузки техники</span>
+			<div class="screen6-in-div-distance-range-out">
+				<div class="screen6-in-div-distance-range-in">
+					<span class="screen6-distance-range-enter-span">Укажите расстояние</span>
+					<div class="select-2" id="select-id">
+						<div id="select-btn-id" class="select-btn">
 
+						</div>
+					</div> 
+					<input class="slider" id="slider-1" type="range" min="0" max="100" step="1" value="50">
+					<div class="range-slider">
+						<span class="min-range">0 км</span>
+						<span class="max-range">100 км</span>
+					</div>
+				</div>
+				<input class="count-km-input" id="inp" type="number" placeholder="50"> 
+				<span class="INP"></span>
+				<span class="count-km-span">км</span>
+			</div>
+			<div class="screen6-div-a-1">
+				<a class="screen6-in-div-a-back-3" href="#">На прерыдущий шаг</a>
+				<a class="screen6-in-div-a-3" href="#">На следующий шаг</a>
+			</div>
+		</div>
+		<div class="screen6-in-div-4">
+			<div class="screen6-plan">
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="screen6-plan-count">
+				<span class="screen6-plan-count-span-1">4</span>
+				<span class="screen6-plan-count-span-2">/5</span>
+			</div>
+			<span class="screen6-in-div-span">Расстояние от МКАД пункт доставки техники</span>
+			<div class="screen6-in-div-distance-range-out">
+				<div class="screen6-in-div-distance-range-in">
+					<span class="screen6-distance-range-enter-span">Укажите расстояние</span>
+					<input class="slider" id="slider-2" type="range" min="0" max="100" step="1" value="50">
+					<div class="progress-2" id="progressbar-2"></div> 
+					<div class="range-slider">
+						<span class="min-range">0 км</span>
+						<span class="max-range">100 км</span>
+					</div>
+				</div>
+				<input class="count-km-input" id="inp-2" type="number" placeholder="50"> 
+				<span class="INP"></span>
+				<span class="count-km-span">км</span>
+			</div>
+			<div class="screen6-div-a-1">
+				<a class="screen6-in-div-a-back-4" href="#">На прерыдущий шаг</a>
+				<a class="screen6-in-div-a-4" href="#">На следующий шаг</a>
+			</div>
+		</div>
+		<div class="screen6-in-div-5 active">
+			<div class="screen6-plan">
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="screen6-plan-end">
+				<span class="screen6-plan-end-span-1">Готово!</span>
+				<span class="screen6-plan-end-span-2">Предварительная сумма 4000р.</span>
+			</div>
+			<span class="screen6-in-div-span-5">Чтобы получить точный расчет,</br> пожалуйста, заполните форму</span>
+			<div class="screen6-div-input-name">
+				<input class="input-name" type="text" placeholder="Введите своё имя">
+				<input class="input-tel" type="tel" placeholder="+7___-___-__-__">
+				<a class="screen6-in-div-a-5" href="#">Получить точный расчет</a>
+				<div>
+					<img src="img/Vector.svg">
+					<span class="privacy">Мы не передаём ваши данные 3-м лицам</span>
+				</div>
+				<a class="screen6-in-div-a-back-5" href="#">На прерыдущий шаг</a>
+			</div>
+		</div>
+		<div class="screen6-in-div-6">
+			<div class="screen6-plan">
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+				<div class="screen6-plan-div active">
+					<div class="screen6-circle active">
+						<div class="screen6-circle-in"></div>
+					</div>
+				</div>
+			</div>
+			<span class="screen6-in-div-finish-span-1">Готово!</span>
+			<span class="screen6-in-div-finish-span-2">Предварительная сумма 4000р.</span>
+			<span class="screen6-in-div-finish-span-3">Спасибо за Вашу заявку!</span>
+			<span class="screen6-in-div-finish-span-4">Наши менеджеры скоро свяжутся с Вами</span>
+		</div>
 
 	</div>
 </div>
@@ -437,8 +741,8 @@
 					<li>Список</li>
 				</ul>
 				<ul class="screen7-in-div-ul-2">
-					<li>Пункт</li>
-					<li>Пункт</li>
+					<li class="screen7-in-div-ul-2-li">Пункт</li>
+					<li class="screen7-in-div-ul-2-li">Пункт</li>
 				</ul>
 			</div>
 		</div>
@@ -485,10 +789,14 @@
 			</div>
 		</div>
 		<div class="footer-div-4">
-			<a href="#" class="footer-div-4-span-1">© 2021 «Премьер»</a>
-			<a href="#" class="footer-div-4-span-2">Соглашение на обработку персональных данных</a>
-			<div class="footer-div-4-div">
-				<img src="img/telegram 1.svg">
+			<div class="footer-div-4-in-1">
+				<a href="#" class="footer-div-4-span-1">© 2021 «Премьер»</a>
+			</div>
+			<div class="footer-div-4-in-2">
+				<a href="#" class="footer-div-4-span-2">Соглашение на обработку персональных данных</a>
+			</div>
+			<div class="footer-div-4-in-3">
+				<img class="footer-div-4-in-3-img" src="img/telegram 1.svg">
 				<img src="img/whatsapp 1.svg">
 			</div>
 		</div>
