@@ -98,7 +98,7 @@ $(document).ready(function(){
 		let selectplace = document.getElementById("select-id");
 		output.innerHTML = sliderValue.value;
 		sliderValue.oninput = function() {
-			selectbutton.style.left =this.value + "%";
+			selectbutton.style.width =this.value + "%";
 			console.log(this.value + "%");
 			output.value = this.value;
 		}
