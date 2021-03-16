@@ -492,9 +492,10 @@ body{
 	width: 153px;
 	height: 24px;
 	background: rgba( 0,0,0,0);
+	font-weight: 500;
 	font-size: 16px;
 	color: #DBDBDB;
-	border: 1px white solid;
+	border: 1px #DBDBDB solid;
 	padding: 14px 138px 14px 14px;
 }
 .screen3-input-2{
@@ -503,10 +504,17 @@ body{
 	margin-top: 10px;
 	background: rgba( 0,0,0,0);
 	font-size: 16px;
-	color: white;
-	border: 1px white solid;
+	color: #DBDBDB;
+	border: 1px #DBDBDB solid;
 	padding: 14px 174px 14px 14px;
-
+}
+.screen3-input-1,
+.screen3-input-2:focus{
+	outline: none;
+}
+.screen3-input-1::placeholder,
+.screen3-input-2::placeholder{
+	color: #DBDBDB;
 }
 .screen3-a{
 	display: flex;
@@ -879,18 +887,6 @@ body{
 	font-weight: 500;
 	margin-left: 4px;
 }
-.slider {
-    appearance: none;
-    width: 520px;
-    height: 8px;
-    border-radius: 5px;  
-    background: #d3d3d3;
-    outline: none;
-	opacity: 0.7;
-	margin: 0px 0px 0px 0px;
-	z-index: 1;
-}
-
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
@@ -900,6 +896,15 @@ body{
 	border: 3px #FFFFFF solid;
 	cursor: pointer;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	z-index: 3;
+}
+.slider{
+	background: linear-gradient(to right, #E8702D 0%, #E8702D 50%, #d3d3d3 50%, #d3d3d3 100%);
+	appearance: none;
+	width: 520px;
+	height: 8px;
+	border-radius: 5px;  
+	outline: none;
 }
 .select2{
 	width: 50%;
@@ -909,14 +914,7 @@ body{
 	top: 50%;
 	transform: translateY(-50%);
 	border-radius: 10px;
-	z-index: 2;
-}
-.select-btn{
-	width: 16px;
-    height: 16px;
-	background:green;
-	position: absolute;
-	top: 25%;
+	z-index: 9999;
 }
 .range-slider{
 	display: flex;
@@ -959,6 +957,7 @@ body{
 }
 .screen6-in-div-ul-li:hover {
 	opacity: 1;
+	transition: .3s;
 }
 .screen6-in-div-ul-li-img{
 	display: block;
@@ -986,34 +985,41 @@ body{
 	margin: 0px auto 366px auto;
 }
 
-.radiobutton{
+.container-radiobutton{
 	display: flex;
-	padding-top: 10px;
+	margin-top: 10px;
+	position: relative;
 }
 .radiobutton-input{
-	margin-right: 12px;
-	display: none;
-}
-.radiobutton-input-fake{
 	width: 18px;
 	height: 18px;
+	margin: 0px 10px 0px 0px;
+	opacity: 0;
+}
+.radiobutton-input-checkmark{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	border: 2px #d8b29d solid;
 	background-color:#1D0C03;
-	margin-right: 12px;
 }
-.radiobutton-input-fake.active{
-	display: inline-block;
-	width: 18px;
-	height: 18px;
+.radiobutton-input-checkmark.active{
+	display: block;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	border: 2px #d8b29d solid;
 	background-color: #DB6D4A;
-	margin-right: 12px;
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 1;
 }
-.radiobutton-input-fake.active::after{
+.radiobutton-input-checkmark.active::after{
 	display: block;
 	content: "";
 	width: 10px;
@@ -1028,13 +1034,13 @@ body{
 	opacity: 0;
 	transition: .3s;
 }
-.radiobutton-input:checked + .radiobutton-input-fake.active::after{
+.radiobutton-input:checked ~.screen6-in-div-ul-li.active{
+	display: flex;
+}
+.radiobutton-input:checked ~ .radiobutton-input-checkmark.active::after{
 	opacity: 1;
 }
-.radiobutton-label{
-	font-size: 16px;
-	font-weight: 600;
-}
+
 .screen6-div-a{
 	display: flex;
 	justify-content: center;
@@ -1276,8 +1282,14 @@ body{
 .footer-div-4-in-3{
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
-.footer-div-4-in-3-img{
+.footer-div-4-in-3-a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-div-4-in-3-a:first-child{
 	margin-right: 10px;
 }
 .footer-div-3-span-1{
