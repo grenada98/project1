@@ -91,46 +91,39 @@ $(document).ready(function(){
 			
 		});
 		///////////////////////////////////////////////
-		///////////////////настройка слайдера
-		let sliderValue = document.getElementById( "slider-1" );
-		let selectbutton = document.getElementById("select-btn-id");
-		let output = document.getElementById("inp");
-		let selectplace = document.getElementById("select-id");
-		output.innerHTML = sliderValue.value;
-		sliderValue.oninput = function() {
-			selectbutton.style.width =this.value + "%";
-			console.log(this.value + "%");
+		///////////////////настройка слайдера 1
+		//1 слайдер
+		let sliderValue = document.getElementById( "slider-1" );  //сам слайдер
+		let output = document.getElementById("inp"); //вывод числа в инпуте
+		document.getElementById("slider-1").oninput = function() {
+			var value = (this.value-this.min)/(this.max-this.min)*100;
 			output.value = this.value;
-		}
+			this.style.background = 'linear-gradient(to right, #E8702D 0%, #E8702D ' + value + '%, #d3d3d3 ' + value + '%, #d3d3d3 100%)';
+		  };
+		  document.getElementById("inp").oninput = function() {
+			  sliderValue.value=this.value;
+			  sliderValue.style.background = 'linear-gradient(to right, #E8702D 0%, #E8702D ' + this.value + '%, #d3d3d3 ' + this.value + '%, #d3d3d3 100%)';
+		  }
 
+		  //2 слайдер
 		let sliderValue_1 = document.getElementById( "slider-2" );
 		let output_1 = document.getElementById("inp-2");
-		let progressbar_2 = document.getElementById("progressbar-2");
-		output_1.innerHTML = sliderValue_1.value;
-		sliderValue_1.oninput = function() {
+		document.getElementById("slider-2").oninput = function() {
+			var value = (this.value-this.min)/(this.max-this.min)*100;
 			output_1.value = this.value;
-			progressbar_2.style.width = this.value + "%";
-		}
-		///////////////////////////////////////////////
-		//настройка чекбоксов списка
-		let radiobtn=document.getElementsByClassName("radiobutton-input-fake");
-		let li_radiobtn = document.getElementsByClassName("screen6-in-div-ul-li");
-		let rbutton_id;
-		
+			this.style.background = 'linear-gradient(to right, #E8702D 0%, #E8702D ' + value + '%, #d3d3d3 ' + value + '%, #d3d3d3 100%)';
+		  };
+		  document.getElementById("inp-2").oninput = function() {
+			  sliderValue_1.value=this.value;
+			  sliderValue_1.style.background = 'linear-gradient(to right, #E8702D 0%, #E8702D ' + this.value + '%, #d3d3d3 ' + this.value + '%, #d3d3d3 100%)';
+		  }
+		//настройка чекбоксов
 		$(".screen6-in-div-ul-li").click(function(){
-			rbutton_id= $(this).find(".radiobutton-input-fake").prop("id");
-			$(this).find(".radiobutton-input-fake").addClass("active");
-			console.log(rbutton_id);
-			console.log(li_radiobtn[0]);
-			console.log(li_radiobtn[0].find(".radiobutton-input-fake"));
-			for (let i = 0; i < radiobtn.length; i++) {
-				if (li_radiobtn[i].find(".radiobutton-input-fake").prop("id")==rbutton_id) {
-					li_radiobtn[i].classList.add("active");
-				}
-				else{
-					li_radiobtn[i].classList.remove("active");
-					radiobtn[i].classList.remove("active");
-				}
-			}
+			$(".screen6-in-div-ul-li").removeClass("active");
+			$(".radiobutton-input").prop("checked", false);
+			$(".radiobutton-input-checkmark.active").removeClass("active");
+			$(this).find(".radiobutton-input").prop("checked", true);
+			$(this).find(".radiobutton-input-checkmark").addClass("active");
+			$(this).addClass("active");
 		})
 });
