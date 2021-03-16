@@ -300,11 +300,15 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
-	max-width: 630px;
+	position: absolute;
+	width: 630px;
 	margin: auto auto;
 	background: linear-gradient(87.94deg, #DB6D4A 0.57%, #E8702D 99.33%);
 	z-index: 99999;
+	position: fixed;
+	top: 50%;
+  	left: 50%;
+ 	transform: translate(-50%, -50%);
 }
 .popup-in-2-img{
 	position: absolute;
@@ -944,6 +948,7 @@ body{
 	margin-bottom: 35px;
 	max-width: 305px;
 	opacity: .5;
+	cursor: pointer;
 }
 .screen6-in-div-ul-li.active{
 	display: flex;
