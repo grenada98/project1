@@ -399,51 +399,51 @@
 				<ul class="screen6-in-div-ul">
 					<li class="screen6-in-div-ul-li">
 						<img class="screen6-in-div-ul-li-img" src="img/manip6.svg">
-						<div class="radiobutton">
-							<input class="radiobutton-input" type="radio">
-							<span class="radiobutton-input-fake" id="radiobtn-1"></span>
-							<label class="radiobutton-label" for="radio">Манипулятор 3 т</label>
-						</div>
+						<label class="container-radiobutton">
+							<input class="radiobutton-input" name="manipulators" type="radio">
+							<span class="radiobutton-input-checkmark" id="radiobtn-1"></span>
+							Манипулятор 3 т
+						</label>
 					</li>
 					<li class="screen6-in-div-ul-li">
 						<img class="screen6-in-div-ul-li-img" src="img/manip7.svg">
-						<div class="radiobutton">
+						<label class="container-radiobutton">
 							<input class="radiobutton-input" type="radio">
-							<span class="radiobutton-input-fake" id="radiobtn-2"></span>
-							<label class="radiobutton-label" for="radio">Манипулятор 5 т</label>
-						</div>
+							<span class="radiobutton-input-checkmark" id="radiobtn-2"></span>
+							Манипулятор 5 т
+						</label>
 					</li>
 					<li class="screen6-in-div-ul-li">
 						<img class="screen6-in-div-ul-li-img" src="img/manip8.svg">
-						<div class="radiobutton">
-							<input class="radiobutton-input" type="radio">
-							<span class="radiobutton-input-fake" id="radiobtn-3"></span>
-							<label class="radiobutton-label" for="radio">Манипулятор 7 т</label>
-						</div>
+						<label class="container-radiobutton">
+							<input class="radiobutton-input" name="manipulators" type="radio">
+							<span class="radiobutton-input-checkmark" id="radiobtn-3"></span>
+							Манипулятор 7 т
+						</label>
 					</li>
 					<li class="screen6-in-div-ul-li">
 						<img class="screen6-in-div-ul-li-img" src="img/manip9.svg">
-						<div class="radiobutton">
-							<input class="radiobutton-input" type="radio">
-							<span class="radiobutton-input-fake" id="radiobtn-4"></span>
-							<label class="radiobutton-label" for="radio">Манипулятор 10 т</label>
-						</div>
+						<label class="container-radiobutton">
+							<input class="radiobutton-input" name="manipulators" type="radio">
+							<span class="radiobutton-input-checkmark" id="radiobtn-4"></span>
+							Манипулятор 10 т
+						</label>
 					</li>
 					<li class="screen6-in-div-ul-li">
 						<img class="screen6-in-div-ul-li-img" src="img/manip10.svg">
-						<div class="radiobutton">
-							<input class="radiobutton-input" type="radio">
-							<span class="radiobutton-input-fake" id="radiobtn-5"></span>
-							<label class="radiobutton-label" for="radio">Манипулятор 15 т</label>
-						</div>
+						<label class="container-radiobutton">
+							<input class="radiobutton-input" name="manipulators" type="radio">
+							<span class="radiobutton-input-checkmark" id="radiobtn-5"></span>
+							Манипулятор 15 т
+						</label>
 					</li>
 					<li class="screen6-in-div-ul-li">
 						<img class="screen6-in-div-ul-li-img" src="img/manip11.svg">
-						<div class="radiobutton">
-							<input class="radiobutton-input" type="radio">
-							<span class="radiobutton-input-fake" id="radiobtn-6"></span>
-							<label class="radiobutton-label" for="radio">Манипулятор 25 т</label>
-						</div>
+						<label class="container-radiobutton">
+							<input class="radiobutton-input" name="manipulators" type="radio">
+							<span class="radiobutton-input-checkmark" id="radiobtn-6"></span>
+							Манипулятор 25 т
+						</label>
 					</li>
 				</ul>
 				<div class="screen6-div-a">
@@ -525,7 +525,7 @@
 					<a class="screen6-in-div-a-2" href="#">На следующий шаг</a>
 				</div>
 			</div>
-			<div class="screen6-in-div-3 active">
+			<div class="screen6-in-div-3">
 				<div class="screen6-plan">
 					<div class="screen6-plan-div active">
 						<div class="screen6-circle active">
@@ -561,11 +561,6 @@
 				<div class="screen6-in-div-distance-range-out">
 					<div class="screen6-in-div-distance-range-in">
 						<span class="screen6-distance-range-enter-span">Укажите расстояние</span>
-						<div class="select-2" id="select-id">
-							<div id="select-btn-id" class="select-btn">
-
-							</div>
-						</div> 
 						<input class="slider" id="slider-1" type="range" min="0" max="100" step="1" value="50">
 						<div class="range-slider">
 							<span class="min-range">0 км</span>
@@ -633,7 +628,7 @@
 					<a class="screen6-in-div-a-4" href="#">На следующий шаг</a>
 				</div>
 			</div>
-			<div class="screen6-in-div-5 active">
+			<div class="screen6-in-div-5">
 				<div class="screen6-plan">
 					<div class="screen6-plan-div active">
 						<div class="screen6-circle active">
@@ -794,8 +789,12 @@
 					<a href="#" class="footer-div-4-span-2">Соглашение на обработку персональных данных</a>
 				</div>
 				<div class="footer-div-4-in-3">
-					<img class="footer-div-4-in-3-img" src="img/telegram 1.svg">
-					<img src="img/whatsapp 1.svg">
+					<a class="footer-div-4-in-3-a" href="#">
+						<img class="footer-div-4-in-3-img" src="img/telegram 1.svg">
+					</a>
+					<a class="footer-div-4-in-3-a" href="#">
+						<img class="footer-div-4-in-3-img" src="img/whatsapp 1.svg">
+					</a>
 				</div>
 			</div>
 		</div>
